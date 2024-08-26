@@ -4,7 +4,7 @@ import logo from '../../../assets/logo.png'
 import { colors, hr80} from '../../globals/style'
 
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <View  style={styles.container}>
         <Text style={styles.title}>Welcome to foodCaRt!</Text>
@@ -18,11 +18,11 @@ const WelcomeScreen = () => {
         <View style={hr80}/>
 
         <View style={styles.btnout}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('signinPage')}>
                 <Text style={styles.btn}>Sign up</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('loginPage')}>
                 <Text style={styles.btn}>Log In</Text>
             </TouchableOpacity>
 
@@ -35,10 +35,10 @@ const styles =  StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#ff4242",
-        paddingTop:100,
+        // paddingTop: 80,
         width:"100%",
-        alignItems: "stretch",
-        justifyContent: "space-between",
+        alignItems: "center",
+        justifyContent: "center",
     },
     title: {
         fontSize: 50,
@@ -48,16 +48,16 @@ const styles =  StyleSheet.create({
         fontWeight: '200',
     },
     logout: {
-        width: '100%',
-        height: '30%',
+        width: '80%',
+        height: '40%',
         // backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         display: 'flex',
     },
     logo: {
-        width: '100%',
-        height: '100%',
+        // width: '100%',
+        // height: '100%',
         resizeMode: 'contain',
     },
     text: {

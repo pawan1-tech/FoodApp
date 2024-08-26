@@ -6,7 +6,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { useState } from 'react';
 
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
     const [emailfocus, setEmailfocus] = useState(false)
     const [passwordfocus, setPasswordfocus] = useState(false)
     const [showpassword, setshowpassword] = useState(false)
@@ -69,7 +69,8 @@ const LoginScreen = () => {
         </View>   
 
         <Text>Don't have an accoun? 
-            <Text style= {{ color: colors.text1}}> Sign Up</Text></Text>
+            <Text style= {styles.signup} 
+            onPress={() => navigation.navigate('signinPage')}> Sign Up</Text></Text>
 
 
         
@@ -83,7 +84,8 @@ const styles = StyleSheet.create({
         flex: 1,
         width: "100%",
         alignItems: "center",
-        justifyContent: "center",
+        // justifyContent: "center",
+        marginTop: '30%',
     },
     head1: {
         fontSize: title.title1,
@@ -157,6 +159,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 10,
         marginVertical: 20,
     },
+    signup: {
+        color: colors.text1,
+        fontWeight: 'bold',
+    }
 });
 
 export default LoginScreen
