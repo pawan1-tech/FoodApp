@@ -60,7 +60,7 @@ const SignupScreen = ({ navigation }) => {
         {/* Email End */}
 
         {/* Phone Start */}
-        <View style={styles.inputout}>
+        {/* <View style={styles.inputout}>
             <Feather name="smartphone" size={24} color={phonefocus === true ? colors.text1 : colors.text3} />
             <TextInput style={styles.input} placeholder='Email' 
             onFocus={() => {
@@ -72,7 +72,7 @@ const SignupScreen = ({ navigation }) => {
                 setshowpassword(false)
                 setshowcpassword(false)
             }}/>
-        </View>
+        </View> */}
 
         {/* Phone End */}
 
