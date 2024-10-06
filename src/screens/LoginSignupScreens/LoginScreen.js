@@ -32,8 +32,8 @@ const LoginScreen = ({ navigation }) => {
             <Feather name="lock" size={24} color={passwordfocus === true ? colors.text1 : colors.text3} />
             <TextInput style={styles.input} placeholder='Password' 
             onFocus={() => {
-                setEmailfocus(false)
                 setPasswordfocus(true)
+                setEmailfocus(false)
             }}
                 secureTextEntry = {showpassword === false ? true : false}
             />
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     head1: {
         fontSize: title.title1,
         color: colors.text1,
+        marginBottom: '30%',
         textAlign: 'center',
         marginVertical: 10,
     },

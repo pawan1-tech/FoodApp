@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         width: "100%",
         alignItems: "center",
         // justifyContent: "center",
-        marginTop: '10%',
+        marginTop: '20%',
     },
     head1: {
         fontSize: title.title1,
@@ -209,8 +209,8 @@ const styles = StyleSheet.create({
     gftext: {
         width: '100%',
         color: colors.text2,
-        marginVertical: 10,
-        fontSize: 25,
+        // marginVertical: 10,
+        // fontSize: 25,
         textAlign: 'center',
     },
     gf: {
